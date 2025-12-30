@@ -1,10 +1,7 @@
 // populate your fields with the correct data
 
-import { Resolver,Query, Args, Int, ResolveField, Parent, Mutation } from "@nestjs/graphql";
+import { Resolver,Query, Args, Int,  Mutation } from "@nestjs/graphql";
 import { User } from "../graphql/models/User";
-import { mockUsers } from "src/__mocks__/mockUsers";
-import { UserSetting } from "../graphql/models/UserSetting";
-import { mockUserSettings } from "src/__mocks__/mockUserSettings";
 import { CreateUserInput } from "../graphql/utils/CreateUserInput";
 import { Inject } from "@nestjs/common";
 import { UserService } from "./UserService";

@@ -9,15 +9,15 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
+    "start:dev": "set NODE_ENV=DEV && nest start --watch",
+    "start:debug": "set NODE_ENV=DEBUG && nest start --debug --watch",
+    "start:prod": "set NODE_ENV=PROD && node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "set NODE_ENV=TEST && jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
     "@apollo/server": "^5.2.0",
